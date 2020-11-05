@@ -4,80 +4,70 @@ html {
     -webkit-overflow-scrolling : touch;
     scroll-behavior: smooth;
     word-break: keep-all;
-}
-a{
-    color: black;
-}
-.top_bar a{
-    color: rgb(212, 212, 212);
-    text-decoration: none;
-
-}
-.top_menu a{
-    color: rgb(212, 212, 212);
-    text-decoration: none;
-
+    overflow-x: hidden;
 }
 
-.b {
+h2 {
+    font-size: calc(10px + 1.5vmin); 
+    padding-top: 2rem; 
+    padding-bottom: 1rem; 
     font-weight: 500;
+    
+    margin: 0;
 }
+h3 {
+    font-size: calc(10px + 1vmin); 
+    font-weight: 500; 
+    color: gray;
+    padding: 0; margin: 0;
+}
+
+a { color: black; }
+
+.top_bar a, .top_menu a { color: rgb(212, 212, 212); text-decoration: none; }
+
+.b { font-weight: 500; }
 
 .top_bar {
-    /*font-size: calc(10px + 1.4vmin);
-    font-size: 200%;*/
     font-size: 2rem;
-
-
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
-    text-align: left;
+    text-align: left; 
 
     margin: 0px;
     padding: 0px;
-
     background: rgba(0, 0, 0, 0.8);
-
 
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-
     /*----------------------------*/
     position: fixed;
     top: 0px;
-    padding-right: 10000px;
+    padding-right: 100vw;
     padding-left: 2rem;
     display: block;
-    z-index: 1000;
-
-
+    z-index: 10000;
 }
+
 body {
     margin: 0px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
-
     font-size: calc(10px + 0.7vmin);
 }
-
-
 
 .top_menu {
     position: fixed;
     top: 0px;
     right: 0px;
-    z-index: 1000;
+    z-index: 20000;
     transition: top .3s ease, right .3s ease;
 }
-
 .top_menu .top_links li {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    
-    /*font-size: 0.9rem;*/
     font-size: 1rem;
-
 
     letter-spacing: 0.2ch;
     margin-right: 4rem;
@@ -87,10 +77,7 @@ body {
     margin-top: 0.6rem;
     font-weight: 100;
 }
-
-.top_links {
-    margin-top: 0px;
-}
+.top_links { margin-top: 0px; }
 
 .img{
     position: relative;                                                         
@@ -104,12 +91,21 @@ body {
     margin-right: 0px;
 }
 
+.img2{ /* 높이 제한 없는 이미지 (not flex) */
+    position: relative;                                                         
+    /*height: 100vh;*/
+    width: calc(100vw - 2rem);
+    background-size: cover;
+    background-repeat:no-repeat;
 
-.main_text {
-    margin: 2rem;
+    background-position: left;
+    padding-right: 0px;
+    margin-right: 0px;
 }
 
-.main_text .section {
+.main_text { margin-left: 2rem; }
+
+section {
     /*padding-bottom: 10rem;*/
     width: 100%;
     height: 100vh;
@@ -122,91 +118,55 @@ body {
 }
 
 .mini_title {
-    font-size: calc(10px + 4vmin);;
+    font-size: calc(10px + 4vmin);
     padding-bottom: 2rem;
 
     font-weight: 900;
 }
 
-
+/* ----- About(첫 페이지) Animation ----- */
 @keyframes fadeIn1 {
-    0% {
-        opacity: 0;
-    }
-    
-    70% {
-        opacity: 1;
-    }
-    
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
 }
 @keyframes fadeIn2 {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
 }
-
 @keyframes fadeIn3 {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
 }
-
 
 .link-icon {
-    width: 100px;
+    width: calc(50px + 8vmin);
     -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    transition: transform .3s ease;
 }
+.link-icon:hover { transform: scale(1.05); }
+
 
 .title {
-    /*font-size: calc(10px + 8vmin);
-    font-size: 5rem;
-    font-size: 400%;
-    font-size: 10vw;*/
-    
     font-size: calc(10px + 8vmin);
     font-weight: 900;
-
 
     animation-name: fadeIn1;
     animation-duration: 5s;
 }
 
-#stay_kr {
-    animation-name: fadeIn2;
-    animation-duration: 5s;
-}
+#stay_kr { animation-name: fadeIn2; animation-duration: 5s; }
 
-#name {
-    animation-name: fadeIn3;
-    animation-duration: 5s;
-}
+#name { animation-name: fadeIn3; animation-duration: 5s; }
 
 .heading {
     letter-spacing: 0.5ch;
     font-weight: 500;
     font-size: calc(10px + 1vmin);
-
     text-shadow: 2px 2px 10px gray;
 }
 
@@ -215,40 +175,22 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     color: black;
-
 }
 a.link {
-    padding-right: 50px;
+    padding-right: 60px;
     color: black;
     text-decoration: none;
 }
-
 .links-container p {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 30px;
 }
 
-.break {
-    flex-basis: 100%;
-    height: 0;
-}
+#par { display: block; vertical-align: top; }
 
-#par {
-    display: block;
-    vertical-align: top;
-}
-
-#insta {
-    width: 100px;
-}
-
-#About {
-    text-shadow: 2px 2px 10px gray;
-}
-
-
-
+#About { text-shadow: 2px 2px 10px gray; }
+#insta { width: calc(50px + 8vmin); }
 
 .footer {
     font-size: 2rem;
@@ -258,8 +200,6 @@ a.link {
     margin: 0px;
     padding: 0px;
     background: rgba(0, 0, 0, 0.8);
-
-
     /*----------------------------*/
     top: 0px;
     padding-right: 10000px;
@@ -281,18 +221,12 @@ a.link {
 
     color: white;
 }
-#copyright {
-    padding-right: calc(10px + 8vmin);
-}
-
+#copyright { padding-right: calc(10px + 8vmin); }
 .footer_menu .footer_links li {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    
-    /*font-size: 0.9rem;*/
     font-size: calc(10px + 0.7vmin);
-
 
     letter-spacing: 0.2ch;
     margin-right: calc(10px + 1vmin);
@@ -302,53 +236,45 @@ a.link {
     margin-top: 0.6rem;
     font-weight: 100;
 
-
     margin-bottom: 0;
 }
+.footer_links { margin: 0; padding: 0; }
+.footer_links a { text-decoration: none; color: white; }
 
-.footer_links {
-    margin: 0;
-    padding: 0;
-}
-.footer_links a {
-    text-decoration: none;
 
-    color: white;
-}
 
+
+/* ---------- 반응형 웹 ---------- */
 @media(max-width: 700px) {
-    .footer_menu li a {
-        display: none;
-    }
+    .footer_menu li a { display: none; }
     #copyright {
         padding: 0;
         margin: 0;
     }
 }
-
-
 @media(max-width: 600px){
-    .img {
+    .img { width: calc(100vw - 1rem); }
+    .img2{
+        position: relative;                                                         
+        /*height: 100vh;*/
         width: calc(100vw - 1rem);
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: left;
+        padding-right: 0px;
+        margin-right: 0px;
     }
 
-    .top_bar {
-        padding-left: 1rem;
-    }
+    .top_bar { padding-left: 1rem; }
 
-    .main_text {
-        margin: 1rem;
-    }
+    .main_text { margin-left: 1rem; }
 
     .top_menu .top_links li {
         position: relative;
         display: inline-block;
         vertical-align: middle;
-        
         /*font-size: 0.9rem;*/
         font-size: 1rem;
-    
-    
         font-weight: 600;
         letter-spacing: 0.2ch;
         margin-right: 1rem;
@@ -359,40 +285,28 @@ a.link {
         font-weight: 100;
     }
 }
-
-@media (max-width: 370px) {
-    .links-container {
-        font-size: 0.7rem;
-    }
-    .link-icon {
-        width: 70px;
-    }
-    #insta {
-        width: 70px;
-    }
-}
-
-
-@media (max-height: 530px) {
-    #stay_kr {
-        font-size: 0.5rem;
-    }
-    #name {
-        font-size: 0.5rem;
-    }
+@media (max-width: 376px) {
+    .links-container { font-size: 0.5rem; }
+    .link-icon { width: 70px; }
+    #insta { width: 70px; }
     .links-container p {
         margin-top: 5px;
         margin-left: 5px;
         margin-bottom: 15px;
+        font-size: calc(5px + 0.7vmin); 
     }
+}
+@media (max-height: 530px) {
+    #stay_kr { font-size: 0.5rem; }
+    #name { font-size: 0.5rem; }
+    .links-container p {
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 15px;
 
-    .link-icon {
-        width: 70px;
+        font-size: calc(5px + 0.2vmin);
     }
-    #insta {
-        width: 70px;
-    }
-    .mini_title {
-        padding-bottom: 16px;
-    }
+    .link-icon { width: 60px; }
+    #insta { width: 60px; }
+    .mini_title { padding-bottom: 16px; }
 }
