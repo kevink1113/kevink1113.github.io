@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;900&family=Roboto&display=swap');
 
+
+ol, ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
 html {
     -webkit-overflow-scrolling : touch;
     scroll-behavior: smooth;
@@ -47,6 +54,9 @@ a { color: black; }
     padding-left: 2rem;
     display: block;
     z-index: 10000;
+
+    height: 3rem;
+    line-height: 3rem;
 }
 
 body {
@@ -69,12 +79,12 @@ body {
     vertical-align: middle;
     font-size: 1rem;
 
-    letter-spacing: 0.2ch;
     margin-right: 4rem;
 
-    line-height: 24px;
+    line-height: 1rem;
+    vertical-align: middle;
     pointer-events: all;
-    margin-top: 0.6rem;
+    margin-top: 1rem;
     font-weight: 100;
 }
 .top_links { margin-top: 0px; }
@@ -270,19 +280,8 @@ a.link {
     .main_text { margin-left: 1rem; }
 
     .top_menu .top_links li {
-        position: relative;
-        display: inline-block;
         vertical-align: middle;
-        /*font-size: 0.9rem;*/
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 0.2ch;
         margin-right: 1rem;
-    
-        line-height: 24px;
-        pointer-events: all;
-        margin-top: 0.5rem;
-        font-weight: 100;
     }
 }
 @media (max-width: 376px) {
