@@ -6,7 +6,6 @@ ol, ul {
     margin-block-end: 0;
 }
 
-
 html {
     -webkit-overflow-scrolling : touch;
     scroll-behavior: smooth;
@@ -286,8 +285,6 @@ a.link {
 }
 @media (max-width: 376px) {
     .links-container { font-size: 0.5rem; }
-    .link-icon { width: 70px; }
-    #insta { width: 70px; }
     .links-container p {
         margin-top: 5px;
         margin-left: 5px;
