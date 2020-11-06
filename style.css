@@ -65,6 +65,8 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-size: calc(10px + 0.7vmin);
+
+    scroll-snap-type: y proximity;
 }
 
 .top_menu {
