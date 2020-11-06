@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700900&family=Roboto&display=swap');
 
 
 ol, ul {
@@ -163,15 +163,43 @@ section {
 
 .title {
     font-size: calc(10px + 8vmin);
-    font-weight: 900;
+    font-weight: 700;
 
-    animation-name: fadeIn1;
     animation-duration: 5s;
 }
 
-#stay_kr { animation-name: fadeIn2; animation-duration: 5s; }
+.text-line text {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 5s linear forwards, filling 4s ease-in forwards;
+    
+  }
+  
+  @keyframes dash {
+    from {
+        stroke-opacity: 0.3;
+    }
+    to {
+      stroke-dashoffset: 0;
+      stroke-opacity: 1;
+    }
+  }
+  
+  @keyframes filling {
+    from{
+      fill: black;
+      fill-opacity: 0;
+    }
+    to {
+      fill: black;
+      fill-opacity: 1;
+    }
+  }
 
-#name { animation-name: fadeIn3; animation-duration: 5s; }
+
+#stay_kr { animation-name: fadeIn2; animation-duration: 7s; }
+
+#name { animation-name: fadeIn3; animation-duration: 7s; }
 
 .heading {
     letter-spacing: 0.5ch;
@@ -200,6 +228,7 @@ a.link {
 #par { display: block; vertical-align: top; }
 
 #About { text-shadow: 2px 2px 10px gray; }
+#About > .text { text-shadow: none;}
 #insta { width: calc(50px + 8vmin); }
 
 .footer {
