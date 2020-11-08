@@ -293,6 +293,7 @@ a.link {
 }
 @media(max-width: 600px){
     .img { width: calc(100vw - 1rem); }
+    #About > svg { width: calc(100vw - 2rem); }
     .img2{
         position: relative;                                                         
         /*height: 100vh;*/
