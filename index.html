@@ -84,21 +84,21 @@
 
                             <div class="heading" id="name">강상원<br>SANGWON KANG<br><br></div>
                             
-                            <div id="name" style="text-shadow: 0 0 0;">Computer Scientist & Artist<br>서강대학교 컴퓨터공학과 학부 재학 중</div>
+                            <div id="name" style="text-shadow: 0 0 0;">Computer Scientist & Artist<br>서강대학교 컴퓨터공학과 학부 재학 중<br>2전공 아트&테크놀로지</div>
                             
                             <script>
                                 var startTime = Date.parse('2000-11-13T11:50:00.000+09:00');
-                                var finishTime = Date.parse('2022-05-29T00:00:00.000+09:00');
+                                // var finishTime = Date.parse('2022-05-29T00:00:00.000+09:00');
                                 var currentTime = Date.now();
-                                var leftTime = (finishTime - currentTime);
+                                // var leftTime = (finishTime - currentTime);
 
                                 var elapsedTime = (currentTime - startTime);
 
                                 function loop() {
                                     setTimeout(function () {
                                         currentTime = Date.now();
-                                        leftTime = (finishTime - currentTime);
-                                        progress = Math.min(1, 1 - (leftTime) / (finishTime - startTime));
+                                        // leftTime = (finishTime - currentTime);
+                                        // progress = Math.min(1, 1 - (leftTime) / (finishTime - startTime));
                                         elapsedTime = (currentTime - startTime);
                                         
                                         document.querySelector("#progress_long").innerText = (elapsedTime / 1000 / 60 / 60 / 24).toFixed(1) + "일째 숨쉬는 중";
@@ -134,7 +134,7 @@
                         <div data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
                             <a href="http://cs.sogang.ac.kr" target="_blank" title="서강대학교 컴퓨터공학과 홈피" style="font-weight: 500">서강대학교 컴퓨터공학과</a> 학부과정<br>
                             2019. 3 - 현재<br>
-                            4학기 이수 예정<br><br>
+                            4학기 이수<br><br>
                         </div>
 
                         <div data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
