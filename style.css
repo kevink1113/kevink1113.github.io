@@ -39,10 +39,6 @@ a {
   text-decoration: none;
 }
 
-.b {
-  font-weight: 500;
-}
-
 .top_bar {
   font-size: 2rem;
   font-family: "Noto Sans KR", sans-serif;
@@ -148,17 +144,7 @@ section {
 }
 
 /* ----- About(첫 페이지) Animation ----- */
-@keyframes fadeIn1 {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 @keyframes fadeIn2 {
   0% {
     opacity: 0;
@@ -195,13 +181,6 @@ section {
 }
 .link-icon:hover {
   transform: scale(1.05);
-}
-
-.title {
-  font-size: calc(10px + 8vmin);
-  font-weight: 700;
-
-  animation-duration: 5s;
 }
 
 .text-line text {
@@ -265,11 +244,6 @@ a.link {
   margin-bottom: 30px;
 }
 
-#par {
-  display: block;
-  vertical-align: top;
-}
-
 #About {
   text-shadow: 2px 2px 10px gray;
 }
@@ -280,21 +254,6 @@ a.link {
   width: calc(50px + 8vmin);
 }
 
-.footer {
-  font-size: 2rem;
-  font-weight: 900;
-  text-align: center;
-
-  margin: 0px;
-  padding: 0px;
-  background: rgba(0, 0, 0, 0.8);
-  /*----------------------------*/
-  top: 0px;
-  padding-right: 10000px;
-  padding-left: 2rem;
-  display: block;
-  z-index: 1000;
-}
 .footer_menu {
   top: 0px;
   right: 0px;
