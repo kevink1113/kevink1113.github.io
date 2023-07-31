@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700900&family=Roboto&display=swap");
+
+ol,
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  word-break: keep-all;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: calc(10px + 1.5vmin);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+
+  margin: 0;
+}
+h3 {
+  font-size: calc(10px + 1vmin);
+  font-weight: 500;
+  color: gray;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+.top_bar a,
+.top_menu a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+}
+
+.top_bar {
+  font-size: 2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+  text-align: left;
+
+  margin: 0px;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.8);
+
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /*----------------------------*/
+  position: fixed;
+  top: 0px;
+  padding-right: 100vw;
+  padding-left: 2rem;
+  display: block;
+  z-index: 10000;
+
+  height: 3rem;
+  line-height: 3rem;
+}
+
+body {
+  margin: 0px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: calc(10px + 0.7vmin);
+}
+
+.top_menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 20000;
+  transition: top 0.3s ease, right 0.3s ease;
+}
+.top_menu .top_links li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+
+  margin-right: 4rem;
+
+  line-height: 1rem;
+  vertical-align: middle;
+  pointer-events: all;
+  margin-top: 1rem;
+  font-weight: 100;
+}
+.top_links {
+  margin-top: 0px;
+}
+
+.img {
+  position: relative;
+  height: 100vh;
+  width: calc(100vw - 2rem);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: left;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.img2 {
+  /* 높이 제한 없는 이미지 (not flex) */
+  position: relative;
+  /*height: 100vh;*/
+  width: calc(100vw - 2rem);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: left;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.main {
+  margin-left: 2rem;
+}
+
+section {
+  /*padding-bottom: 10rem;*/
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 0px;
+  z-index: 500;
+  transition: padding 0.3s ease;
+}
+
+.mini_title {
+  font-size: calc(10px + 4vmin);
+  padding-bottom: 2rem;
+
+  font-weight: 900;
+}
+
+/* ----- About(첫 페이지) Animation ----- */
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.link-icon {
+  width: calc(50px + 8vmin);
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+.link-icon:hover {
+  transform: scale(1.05);
+}
+
+.text-line text {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s linear forwards, filling 4s ease-in forwards;
+}
+
+@keyframes dash {
+  from {
+    stroke-opacity: 0.3;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes filling {
+  from {
+    fill: black;
+    fill-opacity: 0;
+  }
+  to {
+    fill: black;
+    fill-opacity: 1;
+  }
+}
+
+#stay_kr {
+  animation-name: fadeIn2;
+  animation-duration: 7s;
+}
+
+#name {
+  animation-name: fadeIn3;
+  animation-duration: 7s;
+}
+
+.heading {
+  letter-spacing: 0.5ch;
+  font-weight: 500;
+  font-size: calc(10px + 1vmin);
+  text-shadow: 2px 2px 10px gray;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: black;
+}
+a.link {
+  padding-right: 60px;
+  color: black;
+  text-decoration: none;
+}
+.links-container p {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+#About {
+  text-shadow: 2px 2px 10px gray;
+}
+#About > .text {
+  text-shadow: none;
+}
+#insta {
+  width: calc(50px + 8vmin);
+}
+
+.footer_menu {
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  transition: top 0.3s ease, right 0.3s ease;
+
+  text-align: center;
+  line-height: 200px;
+
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+
+  color: white;
+}
+#copyright {
+  padding-right: calc(10px + 8vmin);
+}
+.footer_menu .footer_links li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: calc(10px + 0.7vmin);
+
+  letter-spacing: 0.2ch;
+  margin-right: calc(10px + 1vmin);
+
+  line-height: 24px;
+  pointer-events: all;
+  margin-top: 0.6rem;
+  font-weight: 100;
+
+  margin-bottom: 0;
+}
+.footer_links {
+  margin: 0;
+  padding: 0;
+}
+.footer_links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---------- 반응형 웹 ---------- */
+@media (max-width: 700px) {
+  .footer_menu li a {
+    display: none;
+  }
+  #copyright {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  .img {
+    width: calc(100vw - 1rem);
+  }
+  #About > svg {
+    width: calc(100vw - 2rem);
+  }
+  .img2 {
+    position: relative;
+    /*height: 100vh;*/
+    width: calc(100vw - 1rem);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .top_bar {
+    padding-left: 1rem;
+  }
+
+  .main {
+    margin-left: 1rem;
+  }
+
+  .top_menu .top_links li {
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 376px) {
+  .links-container {
+    font-size: 0.5rem;
+  }
+  .links-container p {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-size: calc(5px + 0.7vmin);
+  }
+}
+@media (max-height: 530px) {
+  #stay_kr {
+    font-size: 0.5rem;
+  }
+  #name {
+    font-size: 0.5rem;
+  }
+  .links-container p {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+
+    font-size: calc(5px + 0.2vmin);
+  }
+  .link-icon {
+    width: 60px;
+  }
+  #insta {
+    width: 60px;
+  }
+  .mini_title {
+    padding-bottom: 16px;
+  }
+}
