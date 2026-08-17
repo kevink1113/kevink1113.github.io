@@ -10,4 +10,4 @@ This repository is a **static personal profile page** (the source for the GitHub
 - **Build**: none. GitHub Pages serves the files as-is; there is no build/compile step.
 - **Lint**: no linter is configured. There is nothing to run.
 - **Test**: no automated tests exist. Verify changes manually in the browser (check desktop and ~375px mobile widths).
-- **Notable behavior**: `#progress_long` updates via `requestAnimationFrame` with days since birth to one decimal place (changes slowly). `#scroll-progress` scales with scroll position.
+- **Notable behavior**: `#progress_long` updates via `requestAnimationFrame` with days since birth to one decimal place (changes slowly). `#scroll-progress` scales with scroll position. The hero title (`.hero-title__svg text`) uses the original SVG stroke-draw (`titleStroke`, 5s) plus fill (`titleFill`, 4s) animation.
