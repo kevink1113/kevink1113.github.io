@@ -356,7 +356,7 @@ body.nav-open .globalnav__toggle span:last-child {
 }
 
 .shelf--white {
-  background: var(--canvas);
+  background: var(--mist);
   padding-top: 0;
 }
 
