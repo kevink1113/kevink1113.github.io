@@ -163,9 +163,10 @@ a:focus-visible {
   background-color: var(--color-bg);
   background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.96) 0%,
-      rgba(255, 255, 255, 0.78) 42%,
-      rgba(255, 255, 255, 0.2) 100%
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(255, 255, 255, 0.88) 38%,
+      rgba(255, 255, 255, 0.35) 68%,
+      rgba(255, 255, 255, 0.08) 100%
     ),
     var(--panel-image);
   background-size: cover;
@@ -245,12 +246,12 @@ a:focus-visible {
   margin: 0;
   font-size: clamp(1rem, 0.9rem + 0.6vw, 1.2rem);
   font-weight: var(--font-weight-medium);
-  letter-spacing: 0.35em;
+  letter-spacing: 0.28em;
 }
 
 .hero-name--en {
   margin-top: 0.15rem;
-  letter-spacing: 0.45em;
+  letter-spacing: 0.32em;
 }
 
 .hero-role {
@@ -452,9 +453,9 @@ a:focus-visible {
     background-position: center;
     background-image: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.94) 0%,
-        rgba(255, 255, 255, 0.82) 55%,
-        rgba(255, 255, 255, 0.55) 100%
+        rgba(255, 255, 255, 0.96) 0%,
+        rgba(255, 255, 255, 0.9) 48%,
+        rgba(255, 255, 255, 0.62) 100%
       ),
       var(--panel-image);
   }
