@@ -12,7 +12,7 @@
     <meta property="og:description" content="Stay hungry. Stay foolish." />
     <meta property="og:image" content="./og_image.png" />
     <meta name="description" content="Stay hungry. Stay foolish." />
-    <meta name="theme-color" content="#ab9bbf" />
+    <meta name="theme-color" content="#000000" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -23,27 +23,36 @@
   </head>
 
   <body>
-    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <a class="site-logo" href="#about" aria-label="홈">⌘</a>
-      <nav class="site-nav" aria-label="주요 메뉴">
-        <a href="https://blog.kevink1113.com/" target="_blank" rel="noopener"
-          >Blog</a
+    <header class="globalnav">
+      <div class="globalnav__inner">
+        <a class="globalnav__logo" href="#about" aria-label="홈">⌘</a>
+        <nav class="globalnav__links" id="site-nav" aria-label="주요 메뉴">
+          <a href="#about">About</a>
+          <a href="#career">Career</a>
+          <a href="#contacts">Contacts</a>
+          <a href="#tmi">TMI</a>
+          <a href="https://blog.kevink1113.com/" target="_blank" rel="noopener"
+            >Blog</a
+          >
+        </nav>
+        <button
+          class="globalnav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="메뉴"
         >
-        <a href="#career">Career</a>
-        <a href="#contacts">Contacts</a>
-      </nav>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <!-- About -->
-      <section
-        id="about"
-        class="panel panel--hero"
-        style="--panel-image: url(./files/back_p.jpg)"
-      >
-        <div class="panel__content">
+      <!-- About / Hero -->
+      <section id="about" class="unit unit--dark unit--hero">
+        <div class="unit__copy">
+          <p class="eyebrow">Sangwon Kang</p>
           <h1 class="hero-title">
             <span class="visually-hidden">Stay hungry. Stay foolish.</span>
             <svg
@@ -51,250 +60,258 @@
               role="presentation"
               aria-hidden="true"
             >
-              <text>
-                <tspan x="0" dy="0.95em">Stay hungry.</tspan>
-                <tspan x="0" dy="1.2em">Stay foolish.</tspan>
+              <text text-anchor="middle">
+                <tspan x="50%" dy="0.95em">Stay hungry.</tspan>
+                <tspan x="50%" dy="1.12em">Stay foolish.</tspan>
               </text>
             </svg>
           </h1>
-
-          <p class="hero-motto" data-aos="fade-up">
-            ‘현실에 안주하지 않고 미래를 향해 우직하게 나아가자’를<br />
-            삶의 모토로 삼고 있습니다.<br /><br />
-            초심을 잃지 않고 오늘보다 더 나은 나, 그리고 사회를 가꾸고자
-            합니다.
+          <p class="subhead">
+            현실에 안주하지 않고 미래를 향해<br />
+            우직하게 나아가자.
           </p>
-
-          <div class="hero-identity" data-aos="fade-up" data-aos-delay="100">
-            <p class="hero-name">강상원</p>
-            <p class="hero-name hero-name--en">SANGWON KANG</p>
-            <p class="hero-role">
-              Computer Scientist &amp; Artist<br />
-              Currently working @ LG Electronics
-            </p>
-            <p class="hero-counter tabular" id="progress_long"></p>
+          <p class="hero-role">
+            Computer Scientist &amp; Artist.<br />
+            Currently working at LG Electronics.
+          </p>
+          <div class="cta-row">
+            <a class="button" href="#career">Career</a>
+            <a class="text-link" href="#contacts">Contacts</a>
           </div>
+          <p class="caption tabular" id="progress_long"></p>
         </div>
+        <figure class="hero-media" data-aos="fade-up">
+          <img
+            src="./files/back_p.jpg"
+            alt="안개 낀 숲길을 따라 이어진 도로"
+          />
+        </figure>
       </section>
 
       <!-- Career -->
-      <section
-        id="career"
-        class="panel panel--career"
-        style="--panel-image: url(./files/macbook_flower_p.jpg)"
-      >
-        <div class="panel__content">
-          <h2 class="section-title" data-aos="fade-up">Career</h2>
+      <section id="career" class="shelf">
+        <div class="unit unit--light unit--intro">
+          <h2 class="headline" data-aos="fade-up">Career.</h2>
+          <p class="subhead" data-aos="fade-up">
+            단대부고에서 서강대, 그리고 LG전자까지.
+          </p>
+        </div>
 
-          <ul class="career-list">
-            <li data-aos="fade-up">
-              <a
-                href="http://dan-kook.sen.hs.kr/"
-                target="_blank"
-                rel="noopener"
-                title="단대부고 홈피"
-                >단국대학교사범대학부속고등학교</a
-              >
-              <span class="career-meta">2016. 3 – 2019. 2</span>
-            </li>
-            <li data-aos="fade-up">
-              <a
-                href="http://cs.sogang.ac.kr"
-                target="_blank"
-                rel="noopener"
-                title="서강대학교 컴퓨터공학과 홈피"
-                >서강대학교 컴퓨터공학과</a
-              >
-              학부과정
-              <span class="career-meta">2019. 3 – 2025. 2 · 5학기 이수</span>
-            </li>
-            <li data-aos="fade-up">
-              <a
-                href="https://acm.sogang.ac.kr/"
-                target="_blank"
-                rel="noopener"
-                title="Sogang ICPC Team"
-                >Sogang ICPC Team</a
-              >
-              — 컴퓨터공학과 학부 소학회, 서강대학교
-              <span class="career-meta"
-                >임원(총무) 2020. 1 – 2020. 12 · 학회원 2019. 3 – 2025. 2</span
-              >
-            </li>
-            <li data-aos="fade-up">
-              <a
-                href="http://release.sogang.ac.kr/"
-                target="_blank"
-                rel="noopener"
-                title="Release"
-                >Release</a
-              >
-              — 컴퓨터공학과 학부 소학회, 서강대학교
-              <span class="career-meta">학회원, 2019. 9 – 2025. 2</span>
-            </li>
-            <li data-aos="fade-up">
-              <strong>soMLier</strong> — 인공지능 연구 모임, 서강대학교
-              <span class="career-meta">동아리원, 2020. 9 – 2025. 2</span>
-            </li>
-            <li data-aos="fade-up">
-              <strong>SGCC</strong> — 중앙 컴퓨터 동아리, 서강대학교
-              <span class="career-meta">동아리원, 2020. 9 – 2025. 2</span>
-            </li>
-            <li data-aos="fade-up">
-              <a
-                href="https://www.lge.co.kr/home"
-                target="_blank"
-                rel="noopener"
-                title="LG전자 홈피"
-                >LG전자</a
-              >
-              MS본부
-              <span class="career-meta">2025. 2 – 현재 · 연구원</span>
-            </li>
-          </ul>
+        <div class="tile-grid">
+          <article class="tile tile--pad" data-aos="fade-up">
+            <p class="eyebrow">Timeline</p>
+            <ul class="spec-list">
+              <li>
+                <div>
+                  <a
+                    href="https://www.lge.co.kr/home"
+                    target="_blank"
+                    rel="noopener"
+                    title="LG전자 홈피"
+                    >LG전자</a
+                  >
+                  <p>MS본부 · 연구원</p>
+                </div>
+                <span>2025. 2 – 현재</span>
+              </li>
+              <li>
+                <div>
+                  <a
+                    href="http://cs.sogang.ac.kr"
+                    target="_blank"
+                    rel="noopener"
+                    title="서강대학교 컴퓨터공학과 홈피"
+                    >서강대학교 컴퓨터공학과</a
+                  >
+                  <p>학부과정 · 5학기 이수</p>
+                </div>
+                <span>2019. 3 – 2025. 2</span>
+              </li>
+              <li>
+                <div>
+                  <a
+                    href="https://acm.sogang.ac.kr/"
+                    target="_blank"
+                    rel="noopener"
+                    title="Sogang ICPC Team"
+                    >Sogang ICPC Team</a
+                  >
+                  <p>임원(총무) · 학회원</p>
+                </div>
+                <span>2019. 3 – 2025. 2</span>
+              </li>
+              <li>
+                <div>
+                  <a
+                    href="http://release.sogang.ac.kr/"
+                    target="_blank"
+                    rel="noopener"
+                    title="Release"
+                    >Release</a
+                  >
+                  <p>컴퓨터공학과 학부 소학회</p>
+                </div>
+                <span>2019. 9 – 2025. 2</span>
+              </li>
+              <li>
+                <div>
+                  <strong>soMLier</strong>
+                  <p>인공지능 연구 모임</p>
+                </div>
+                <span>2020. 9 – 2025. 2</span>
+              </li>
+              <li>
+                <div>
+                  <strong>SGCC</strong>
+                  <p>중앙 컴퓨터 동아리</p>
+                </div>
+                <span>2020. 9 – 2025. 2</span>
+              </li>
+              <li>
+                <div>
+                  <a
+                    href="http://dan-kook.sen.hs.kr/"
+                    target="_blank"
+                    rel="noopener"
+                    title="단대부고 홈피"
+                    >단국대학교사범대학부속고등학교</a
+                  >
+                  <p>고등학교</p>
+                </div>
+                <span>2016. 3 – 2019. 2</span>
+              </li>
+            </ul>
+          </article>
+
+          <figure class="tile tile--photo" data-aos="fade-up">
+            <img
+              src="./files/macbook_flower_p.jpg"
+              alt="맥북과 꽃, 책이 놓인 작업 공간"
+            />
+            <figcaption>
+              <p class="eyebrow">Now</p>
+              <h3>LG Electronics</h3>
+              <p>MS본부 연구원</p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <!-- Contacts -->
-      <section id="contacts" class="panel panel--contacts">
-        <div class="panel__content">
-          <h2 class="section-title" data-aos="fade-up">Contacts</h2>
+      <section id="contacts" class="shelf shelf--white">
+        <div class="unit unit--light unit--intro">
+          <h2 class="headline" data-aos="fade-up">Get in touch.</h2>
+          <p class="subhead" data-aos="fade-up">
+            메일부터 GitHub, 블로그까지. 편하게 연락하세요.
+          </p>
+        </div>
 
-          <div class="contacts-grid">
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="mailto:me@kevink1113.com"
-            >
-              <img class="contact-card__icon" src="./files/mail.svg" alt="" />
-              <span class="contact-card__label">Mail</span>
-              <span class="contact-card__value">me@kevink1113.com</span>
-            </a>
-
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="https://blog.kevink1113.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="contact-card__icon"
-                src="./files/blog_2.svg"
-                alt=""
-              />
-              <span class="contact-card__label">Blog</span>
-              <span class="contact-card__value">강상원의 IT 블로그</span>
-            </a>
-
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="https://www.facebook.com/kevink1113"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="contact-card__icon"
-                src="./files/facebook.svg"
-                alt=""
-              />
-              <span class="contact-card__label">Facebook</span>
-              <span class="contact-card__value">kevink1113</span>
-            </a>
-
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="https://instagram.com/sangwon_1113"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="contact-card__icon"
-                src="./files/instagram.svg"
-                alt=""
-              />
-              <span class="contact-card__label">Instagram</span>
-              <span class="contact-card__value">sangwon_1113</span>
-            </a>
-
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="https://github.com/kevink1113"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="contact-card__icon"
-                src="./files/github.svg"
-                alt=""
-              />
-              <span class="contact-card__label">GitHub</span>
-              <span class="contact-card__value">kevink1113</span>
-            </a>
-
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="https://www.acmicpc.net/user/kevink1113"
-              target="_blank"
-              rel="noopener"
-            >
-              <img class="contact-card__icon" src="./files/boj.svg" alt="" />
-              <span class="contact-card__label">Baekjoon OJ</span>
-              <span class="contact-card__value">kevink1113</span>
-            </a>
-
-            <a
-              class="contact-card"
-              data-aos="fade-up"
-              href="https://solved.ac/profile/kevink1113"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="contact-card__icon"
-                src="./files/solvedac.svg"
-                alt=""
-              />
-              <span class="contact-card__label">solved.ac</span>
-              <span class="contact-card__value">kevink1113</span>
-            </a>
-          </div>
+        <div class="tile-grid tile-grid--3">
+          <a class="tile tile--card" data-aos="fade-up" href="mailto:me@kevink1113.com">
+            <img src="./files/mail.svg" alt="" />
+            <h3>Mail</h3>
+            <p>me@kevink1113.com</p>
+            <span class="text-link">Write</span>
+          </a>
+          <a
+            class="tile tile--card"
+            data-aos="fade-up"
+            href="https://blog.kevink1113.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./files/blog_2.svg" alt="" />
+            <h3>Blog</h3>
+            <p>강상원의 IT 블로그</p>
+            <span class="text-link">Visit</span>
+          </a>
+          <a
+            class="tile tile--card"
+            data-aos="fade-up"
+            href="https://github.com/kevink1113"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./files/github.svg" alt="" />
+            <h3>GitHub</h3>
+            <p>kevink1113</p>
+            <span class="text-link">Follow</span>
+          </a>
+          <a
+            class="tile tile--card"
+            data-aos="fade-up"
+            href="https://instagram.com/sangwon_1113"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./files/instagram.svg" alt="" />
+            <h3>Instagram</h3>
+            <p>sangwon_1113</p>
+            <span class="text-link">Follow</span>
+          </a>
+          <a
+            class="tile tile--card"
+            data-aos="fade-up"
+            href="https://www.facebook.com/kevink1113"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./files/facebook.svg" alt="" />
+            <h3>Facebook</h3>
+            <p>kevink1113</p>
+            <span class="text-link">Follow</span>
+          </a>
+          <a
+            class="tile tile--card"
+            data-aos="fade-up"
+            href="https://www.acmicpc.net/user/kevink1113"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./files/boj.svg" alt="" />
+            <h3>Baekjoon OJ</h3>
+            <p>kevink1113</p>
+            <span class="text-link">Profile</span>
+          </a>
+          <a
+            class="tile tile--card"
+            data-aos="fade-up"
+            href="https://solved.ac/profile/kevink1113"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./files/solvedac.svg" alt="" />
+            <h3>solved.ac</h3>
+            <p>kevink1113</p>
+            <span class="text-link">Profile</span>
+          </a>
         </div>
       </section>
 
       <!-- TMI -->
-      <section
-        id="tmi"
-        class="panel panel--tmi"
-        style="--panel-image: url(./files/TMI3.jpg)"
-      >
-        <div class="panel__content panel__content--wide">
-          <h2 class="section-title" data-aos="fade-up">사소한 것까지: TMI</h2>
-
-          <p data-aos="fade-up">
-            오래 전부터 컴퓨터로 게임 하는 것보다 컴퓨터를 이용해 무언가를
-            만드는 데 더 관심이 많았던지라 여러 플랫폼과 다양한 그래픽 툴을
-            다뤄오고 있습니다.
+      <section id="tmi" class="shelf">
+        <div class="unit unit--dark unit--intro unit--rounded">
+          <h2 class="headline" data-aos="fade-up">사소한 것까지.</h2>
+          <p class="subhead" data-aos="fade-up">
+            게임을 하는 것보다, 컴퓨터를 이용해<br />
+            무언가를 만드는 데 더 관심이 많았습니다.
           </p>
+        </div>
 
-          <article class="tmi-block" data-aos="fade-up">
+        <div class="tile-grid">
+          <article class="tile tile--pad tile--dark" data-aos="fade-up">
+            <p class="eyebrow">01</p>
             <h3>Algorithm</h3>
             <p>
               2019년 컴퓨터공학과 학부 입학과 함께 입문하여 꾸준히 실력 증진
               중입니다.
             </p>
-
             <h4>2019</h4>
             <ul>
               <li>Sogang ICPC Team 1st Freshman Con — 4th place</li>
               <li>Sogang ICPC Team 2nd Freshman Con — 1st place</li>
               <li>2019 ICPC Asia Seoul Preliminary Contest (GGgo)</li>
             </ul>
-
             <h4>2020</h4>
             <ul>
               <li>
@@ -302,20 +319,14 @@
                   href="https://acm.sogang.ac.kr"
                   target="_blank"
                   rel="noopener"
-                  title="Sogang ICPC Team"
                   >Sogang ICPC Team</a
                 >
                 총무
               </li>
-              <li>2020-1 Sogang ICPC Team Algorithm 스터디 멘토</li>
-              <li>
-                SUAPC 2020 (신촌지역 대학생 프로그래밍 대회) Div. 1 (O(n)이
-                좋아요)
-              </li>
+              <li>2020-1 Algorithm 스터디 멘토</li>
+              <li>SUAPC 2020 Div. 1 (O(n)이 좋아요)</li>
             </ul>
-
             <h4>Baekjoon OJ</h4>
-            <p>solved.ac status:</p>
             <a
               href="https://solved.ac/kevink1113"
               target="_blank"
@@ -330,110 +341,96 @@
             </a>
           </article>
 
-          <article class="tmi-block" data-aos="fade-up">
-            <h3>Design</h3>
-            <p>
-              멋들어진 프레젠테이션을 만들고자 하는 열망에서 시작되어,
-              PowerPoint를 넘어 Photoshop, After Effect / Premier Pro, SketchUp
-              등의 그래픽 툴을 다룹니다. 학생 인권 포스터, 졸업 영상 제작에서
-              시작해 이제는 각종 인쇄물 / 영상 편집과 구조물 3D 모델링을 하고
-              있습니다. 특히 Apple Keynotes (WWDC, Special Event...)에 영감을
-              받은 이래 ‘단순함과 디테일’을 갖춘 창작물을 만들고자 합니다. UX
-              디자인에도 발을 들여 HTML, CSS, JavaScript를 공부중에 있습니다.
-            </p>
-            <p>
-              <a
-                href="https://kevink1113.github.io/profile"
-                target="_blank"
-                rel="noopener"
-                title="강상원"
-                >개인 Profile Page</a
-              >
-              (지금 보고 있는 이 페이지),
-              <a
-                href="https://ssadam.assa.dev"
-                target="_blank"
-                rel="noopener"
-                title="Ssadam(custom community website)"
-                >Ssadam</a
-              >,
-              <a
-                href="https://blog.kevink1113.com"
-                target="_blank"
-                rel="noopener"
-                title="강상원의 IT 블로그"
-                >Blog</a
-              >
-            </p>
-          </article>
-
-          <article class="tmi-block" data-aos="fade-up">
-            <h3>Development</h3>
-            <ul>
-              <li>
-                2019 – 현재) 컴퓨터공학과 개발 학회
-                <a
-                  href="http://release.sogang.ac.kr"
-                  target="_blank"
-                  rel="noopener"
-                  title="Release"
-                  >Release</a
+          <div class="tile-stack">
+            <article class="tile tile--pad" data-aos="fade-up">
+              <p class="eyebrow">02</p>
+              <h3>Design</h3>
+              <p>
+                Apple Keynote에서 받은 영감 이래, ‘단순함과 디테일’을 갖춘
+                창작물을 만들고자 합니다. PowerPoint를 넘어 Photoshop, After
+                Effects, Premiere Pro, SketchUp을 다룹니다.
+              </p>
+              <p>
+                <a href="https://blog.kevink1113.com" target="_blank" rel="noopener"
+                  >Blog</a
                 >
-                학회원
-              </li>
-              <li>
-                Django —
-                <a
-                  href="https://ssadam.assa.dev"
-                  target="_blank"
-                  rel="noopener"
-                  title="Ssadam(custom community website)"
+                ·
+                <a href="https://ssadam.assa.dev" target="_blank" rel="noopener"
                   >Ssadam</a
                 >
-                (custom community website)
-                <a
-                  href="https://github.com/kevink1113/A.S.S.A-Community"
-                  target="_blank"
-                  rel="noopener"
-                  title="Ssadam(custom community website) GitHub link"
-                  >(GitHub Repo)</a
-                >
-              </li>
-              <li>OpenFrameworks Project — WaterFall, Maze, WaterFall Game</li>
-              <li>
-                SwiftUI —
-                <a
-                  href="https://github.com/kevink1113/SeoulWeather_SwiftUI"
-                  target="_blank"
-                  rel="noopener"
-                  title="SeoulWeather GitHub link"
-                  >SeoulWeather</a
-                >
-                (studying)
-              </li>
-              <li>React, Django, JavaScript (studying)</li>
-            </ul>
-          </article>
+              </p>
+            </article>
+
+            <article class="tile tile--pad" data-aos="fade-up">
+              <p class="eyebrow">03</p>
+              <h3>Development</h3>
+              <ul>
+                <li>
+                  <a
+                    href="http://release.sogang.ac.kr"
+                    target="_blank"
+                    rel="noopener"
+                    >Release</a
+                  >
+                  학회원 (2019 – 현재)
+                </li>
+                <li>
+                  Django —
+                  <a href="https://ssadam.assa.dev" target="_blank" rel="noopener"
+                    >Ssadam</a
+                  >
+                  <a
+                    href="https://github.com/kevink1113/A.S.S.A-Community"
+                    target="_blank"
+                    rel="noopener"
+                    >(GitHub)</a
+                  >
+                </li>
+                <li>OpenFrameworks — WaterFall, Maze</li>
+                <li>
+                  SwiftUI —
+                  <a
+                    href="https://github.com/kevink1113/SeoulWeather_SwiftUI"
+                    target="_blank"
+                    rel="noopener"
+                    >SeoulWeather</a
+                  >
+                </li>
+                <li>React, Django, JavaScript</li>
+              </ul>
+            </article>
+          </div>
         </div>
+
+        <figure class="tile tile--photo tile--full" data-aos="fade-up">
+          <img src="./files/TMI3.jpg" alt="책과 메모가 놓인 작업 장면" />
+        </figure>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p class="site-footer__copy">
-        © 2020–2026 SangWon Kang All Rights Reserved.
-      </p>
-      <nav class="site-footer__nav" aria-label="푸터 메뉴">
-        <a href="https://blog.kevink1113.com/" target="_blank" rel="noopener"
-          >Blog</a
-        >
-        <a href="#career">Career</a>
-        <a href="#contacts">Contacts</a>
-      </nav>
+    <footer class="ac-footer">
+      <div class="ac-footer__inner">
+        <p class="ac-footer__note">
+          강상원 개인 프로필. Stay hungry. Stay foolish.
+        </p>
+        <nav class="ac-footer__links" aria-label="푸터 메뉴">
+          <a href="#about">About</a>
+          <a href="#career">Career</a>
+          <a href="#contacts">Contacts</a>
+          <a href="#tmi">TMI</a>
+          <a href="https://blog.kevink1113.com/" target="_blank" rel="noopener"
+            >Blog</a
+          >
+        </nav>
+        <p class="ac-footer__copy">
+          Copyright © 2020–2026 SangWon Kang. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({ duration: 800, once: true, offset: 40 });
+      AOS.init({ duration: 700, once: true, offset: 48, easing: "ease-out" });
 
       (function () {
         var startTime = Date.parse("2000-11-13T11:50:00.000+09:00");
@@ -449,18 +446,23 @@
       })();
 
       (function () {
-        var bar = document.getElementById("scroll-progress");
+        var toggle = document.querySelector(".globalnav__toggle");
+        var links = document.getElementById("site-nav");
+        if (!toggle || !links) return;
 
-        function update() {
-          var doc = document.documentElement;
-          var max = doc.scrollHeight - doc.clientHeight;
-          var ratio = max > 0 ? doc.scrollTop / max : 0;
-          bar.style.transform = "scaleX(" + ratio + ")";
+        function close() {
+          document.body.classList.remove("nav-open");
+          toggle.setAttribute("aria-expanded", "false");
         }
 
-        window.addEventListener("scroll", update, { passive: true });
-        window.addEventListener("resize", update);
-        update();
+        toggle.addEventListener("click", function () {
+          var open = document.body.classList.toggle("nav-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        links.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", close);
+        });
       })();
     </script>
   </body>
